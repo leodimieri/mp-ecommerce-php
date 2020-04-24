@@ -168,7 +168,7 @@
                                     "failure" => $url ."/failure",
                                     "pending" => $url ."/pending"
                                 );
-                                $preference->auto_return = "all";
+                                
                                 $preference->external_reference = "ABCD1234";
 
                                 $preference->notification_url = $url ."/notifications";
