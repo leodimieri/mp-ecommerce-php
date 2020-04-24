@@ -190,7 +190,7 @@
                                         </div>
 
                                         <?php 
-                                            echo json_encode($_POST);
+                                            echo json_encode($_REQUEST);
                                         ?>
                                         
                                         <h3 style="font-size:2em;">
