@@ -12,13 +12,13 @@
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="./assets/category-landing.css" media="screen, print">
+    <link rel="stylesheet" href="../assets/category-landing.css" media="screen, print">
 
-    <link rel="stylesheet" href="./assets/category.css" media="screen, print">
+    <link rel="stylesheet" href="../assets/category.css" media="screen, print">
 
-    <link rel="stylesheet" href="./assets/merch-tools.css" media="screen, print">
+    <link rel="stylesheet" href="../assets/merch-tools.css" media="screen, print">
 
-    <link rel="stylesheet" href="./assets/fonts" media="">
+    <link rel="stylesheet" href="../assets/fonts" media="">
     <style>
         .as-filter-button-text {
             font-size: 26px;
@@ -49,7 +49,7 @@
             <div class="as-navtuck-wrapper">
                 <div class="as-l-fullwidth  as-navtuck" data-events="event52">
                     <div>
-                        <div class="pd-billboard pd-category-header" style="background-color:#da4b48">
+                        <div class="pd-billboard pd-category-header" style="background-color:#009ee3;">
                             <div class="pd-l-plate-scale">
                                 <div class="pd-billboard-background">
                                     
@@ -67,22 +67,18 @@
                 <div id="accessories-tab" class="as-accessories-details">
                     <div class="as-accessories" id="as-accessories" style="height: 70vh;">
                             <div style="margin-top:20px;text-align:center;">
-                            <svg style="max-width:60px;max-height:60px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512px" height="512px"><g><g>
-                                <g>
-                                    <g>
-                                        <path d="M256,0C114.844,0,0,114.844,0,256s114.844,256,256,256s256-114.844,256-256S397.156,0,256,0z M256,490.667     C126.604,490.667,21.333,385.396,21.333,256S126.604,21.333,256,21.333S490.667,126.604,490.667,256S385.396,490.667,256,490.667     z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#DA4B48"/>
-                                        <path d="M359.542,152.458c-4.167-4.167-10.917-4.167-15.083,0L256,240.917l-88.458-88.458c-4.167-4.167-10.917-4.167-15.083,0     c-4.167,4.167-4.167,10.917,0,15.083L240.917,256l-88.458,88.458c-4.167,4.167-4.167,10.917,0,15.083     c2.083,2.083,4.813,3.125,7.542,3.125s5.458-1.042,7.542-3.125L256,271.083l88.458,88.458c2.083,2.083,4.813,3.125,7.542,3.125     c2.729,0,5.458-1.042,7.542-3.125c4.167-4.167,4.167-10.917,0-15.083L271.083,256l88.458-88.458     C363.708,163.375,363.708,156.625,359.542,152.458z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#DA4B48"/>
-                                    </g>
-                                </g>
+                            <svg style="max-width:60px;max-height:60px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" width="512px" height="512px"><g><g>
+                                <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30   S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#009EE3"/>
+                                <path d="M30,6c-0.552,0-1,0.447-1,1v23H14c-0.552,0-1,0.447-1,1s0.448,1,1,1h16c0.552,0,1-0.447,1-1V7C31,6.447,30.552,6,30,6z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#009EE3"/>
                             </g></g> </svg>
+
                             </div>
                             <center>
-                                <h2>Tu pago fue rechazado</h2>
-                                <p><b>Lamentablemente tuvimos inconvenientes para procesar tu compra.</b><br>
-                                    
-                                    ...
+                                <h2>Tu pago esta pendiente de aprobación</h2>
+                                <p><b>Deberemos esperar a su resolución</b><br>
+                                    En cuanto sepamos su estado, te notificaremos en tu cuenta.
                                 </p>
-                                <a href="./" class="mercadopago-button">Volver a la tienda</a>
+                                <a href="../" class="mercadopago-button">Volver a la tienda</a>
                             </center>
                             
                     </div>

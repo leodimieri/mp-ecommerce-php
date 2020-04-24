@@ -171,9 +171,9 @@
                                 $preference->items = array($item1);
 
                                 $preference->back_urls = array(
-                                    "success" => $url ."/success.php",
-                                    "failure" => $url ."/failure.php",
-                                    "pending" => $url ."/pending.php"
+                                    "success" => $url ."/success",
+                                    "failure" => $url ."/failure",
+                                    "pending" => $url ."/pending"
                                 );
                                 $preference->auto_return = "all";
                                 $preference->external_reference = "ABCD1234";
