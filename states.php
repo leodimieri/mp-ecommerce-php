@@ -94,6 +94,9 @@
                             </div>
                             <center>
                                 <h2>¡Tu pago fue aprobado!</h2>
+                                <?php
+                                 echo json_encode($_POST);
+                                ?>
                                 <h4>
                                     Pagaste: <b><?php echo "$" . $payment->transaction_amount; ?></b>,
                                     con <b><?php echo $payment->payment_method_id; ?></b> (<b><?php echo $payment->installments; ?></b> cuota/s de <b><?php echo "$ " . $payment->transaction_details->installment_amount; ?></b>)<br>

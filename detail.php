@@ -169,7 +169,7 @@
                                     "pending" => $url ."/pending"
                                 );
 
-                                $preference->auto_return = "approved";
+                                
                                 
                                 $preference->external_reference = "ABCD1234";
 
