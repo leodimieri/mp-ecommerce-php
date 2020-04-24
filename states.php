@@ -102,6 +102,8 @@
                                     con <b><?php echo $payment->payment_method_id; ?></b> (<b><?php echo $payment->installments; ?></b> cuota/s de <b><?php echo "$ " . $payment->transaction_details->installment_amount; ?></b>)<br>
                                     Tu referencia para el pago es: <b><?php echo $_POST['external_reference']; ?></b><br>
                                     Tu ID del pago es: <b><?php echo $_POST['payment_id']; ?></b> (Conservalo para posibles revisiones)<br>
+                                    <br>
+                                    Pagaste la preferencia con ID: <b><?php echo $_POST['preference_id']; ?></b>
                                 </h4>
                                 <p><b>Muchas gracias por tu compra</b><br>
                                     En tu cuenta, en la sección de compras vas a poder ver el detalle y el estado de tu pedido.
