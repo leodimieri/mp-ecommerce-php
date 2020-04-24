@@ -164,7 +164,7 @@
                                 $preference->items = array($item1);
 
                                 $preference->back_urls = array(
-                                    "success" => "https://webfony.com.ar",
+                                    "success" => $url ."/success",
                                     "failure" => $url ."/failure",
                                     "pending" => $url ."/pending"
                                 );
