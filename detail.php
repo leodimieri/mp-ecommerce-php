@@ -164,12 +164,12 @@
                                 $preference->items = array($item1);
 
                                 $preference->back_urls = array(
-                                    "success" => $url ."/success",
+                                    "success" => "https://webfony.com.ar",
                                     "failure" => $url ."/failure",
                                     "pending" => $url ."/pending"
                                 );
 
-                                $preference->auto_return = "approved";
+                                $preference->auto_return = "all";
                                 
                                 $preference->external_reference = "ABCD1234";
 
@@ -188,7 +188,7 @@
 
                                             </h3>
                                         </div>
-                                        <h3><?php echo $preference->notification_url; ?></h3>
+                                        
                                         <h3 style="font-size:2em;">
                                            <b><?php echo "$" . $_POST['price'] ?> </b>
                                         </h3>
