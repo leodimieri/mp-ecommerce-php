@@ -119,7 +119,9 @@
 
                                 $url = "https://" . $_SERVER["SERVER_NAME"];
 
-                                MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398');
+                                MercadoPago\SDK::setAccessToken('TEST-8196777983571350-031822-67512cd23d704fe6dfb8670cdcd5c825-469485398');
+                                //TEST-8196777983571350-031822-67512cd23d704fe6dfb8670cdcd5c825-469485398
+                                //APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398
                                 
                                 $preference = new MercadoPago\Preference();
                                 $preference->payment_methods = array(
@@ -169,7 +171,7 @@
                                     "pending" => $url ."/pending"
                                 );
 
-                                
+                                $preference->auto_return = "approved";
                                 
                                 $preference->external_reference = "ABCD1234";
 
