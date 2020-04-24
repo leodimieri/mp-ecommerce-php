@@ -174,7 +174,10 @@
                                     "failure" => __DIR__ ."/failure.php",
                                     "pending" => __DIR__ ."/pending.php"
                                 );
+                                $preference->auto_return = "all";
                                 $preference->external_reference = "ABCD1234";
+
+                                $preference->notification_url = __DIR__ ."/notifications.php";
 
                                 $preference->save();
                                 ?>
