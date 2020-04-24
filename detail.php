@@ -65,7 +65,7 @@
             <div class="as-search-results as-filter-open as-category-landing as-desktop" id="as-search-results">
 
                 <div id="accessories-tab" class="as-accessories-details">
-                    <div class="as-accessories" id="as-accessories">
+                    <div class="as-accessories" id="as-accessories" style="height: 70vh;">
                         <div class="as-accessories-header">
                             <div class="as-search-results-count">
                                 <span class="as-search-results-value"></span>
@@ -118,13 +118,6 @@
                                 require __DIR__ .  '/vendor/autoload.php';
                                 $http = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on'? "https://" : "http://";
                                 $url = $http . $_SERVER["SERVER_NAME"];
-                                // {
-                                //     "id": 554010269,
-                                //     "nickname": "TT383403",
-                                //     "password": "qatest2718",
-                                //     "site_status": "active",
-                                //     "email": "test_user_90132478@testuser.com"
-                                // }
 
                                 MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398');
                                 
@@ -207,7 +200,7 @@
                                         </h3>
                                     </div>
                                     
-                                    <form method="POST">
+                                    <form action="/procesar-pago" method="POST">
                                         <script
                                             src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
                                             data-preference-id="<?php echo $preference->id; ?>"
