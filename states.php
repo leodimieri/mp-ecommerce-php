@@ -86,7 +86,7 @@
                                     Pagaste: <b><?php echo "$" . $_POST['transaction_amount'];?></b>,
                                     con <b><?php echo $_POST['payment_method_id']; ?></b> (<b><?php echo $_POST['installments']; ?></b> cuota/s de <b><?php echo "$ " . $_POST['transaction_details']['installment_amount']; ?></b>)<br>
                                     Tu referencia para el pago es: <b><?php echo $_POST['external_reference']; ?></b><br>
-                                    Tu ID del pago es: <b><?php echo $_POST['id']; ?></b> (Conservalo para posibles revisiones)<br>
+                                    Tu ID del pago es: <b><?php echo $_POST['payment_id']; ?></b> (Conservalo para posibles revisiones)<br>
                                 </h4>
                                 <p><b>Muchas gracias por tu compra</b><br>
                                     En tu cuenta, en la sección de compras vas a poder ver el detalle y el estado de tu pedido.
@@ -112,7 +112,6 @@
                                 <h2>Tu pago fue rechazado</h2>
                                 <p><b>Lamentablemente tuvimos inconvenientes para procesar tu compra.</b><br>
                                     
-                                    ...
                                 </p>
                                 <a href="../" class="mercadopago-button">Volver a la tienda</a>
                             </center>

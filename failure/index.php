@@ -80,7 +80,6 @@
                                 <h2>Tu pago fue rechazado</h2>
                                 <p><b>Lamentablemente tuvimos inconvenientes para procesar tu compra.</b><br>
                                     
-                                    ...
                                 </p>
                                 <a href="../" class="mercadopago-button">Volver a la tienda</a>
                             </center>
