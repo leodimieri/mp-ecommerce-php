@@ -178,7 +178,7 @@
                                 $preference->auto_return = "all";
                                 $preference->external_reference = "ABCD1234";
 
-                                $preference->notification_url = $url ."/notifications.php";
+                                $preference->notification_url = $url ."/notifications";
 
                                 $preference->save();
                                 ?>
@@ -206,10 +206,7 @@
                                             ?>
                                         </h3>
                                     </div>
-                                    <span style="font-size:2em;"><?php echo $preference->back_urls->success; ?></span>
-                                            <br>
-                                            <span style="font-size:2em;"><?php echo $preference->notification_url; ?></span>
-                                            <br>
+                                    
                                     <form method="POST">
                                         <script
                                             src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
