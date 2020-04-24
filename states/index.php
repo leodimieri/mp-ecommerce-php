@@ -67,7 +67,7 @@
                 <div id="accessories-tab" class="as-accessories-details">
 
                     <?php 
-                        echo json_encode($_REQUEST);
+                        echo json_encode($_POST);
                     ?>
 
                     <div class="as-accessories" id="as-accessories" style="height: 70vh; <?php if ($_REQUEST['payment_status']!='approved') { echo "display:none;"; } ?>">
