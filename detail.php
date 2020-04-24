@@ -188,6 +188,7 @@
 
                                             </h3>
                                         </div>
+                                        <h3><?php echo $url ."/pending"; ?></h3>
                                         <h3 style="font-size:2em;">
                                            <b><?php echo "$" . $_POST['price'] ?> </b>
                                         </h3>
