@@ -188,10 +188,6 @@
 
                                             </h3>
                                         </div>
-
-                                        <?php 
-                                            echo json_encode($_REQUEST);
-                                        ?>
                                         
                                         <h3 style="font-size:2em;">
                                            <b><?php echo "$" . $_POST['price'] ?> </b>
