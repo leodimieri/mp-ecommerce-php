@@ -49,7 +49,17 @@
             <div class="as-navtuck-wrapper">
                 <div class="as-l-fullwidth  as-navtuck" data-events="event52">
                     <div>
-                        <div class="pd-billboard pd-category-header" style="background-color:#21c87a;">
+                        <div class="pd-billboard pd-category-header" 
+                             <?php
+                                if($_POST['payment_status']=='approved') {
+                                    echo 'style="background-color:#21c87a;"';
+                                } else if ($_POST['payment_status']=='rejected') {
+                                    echo 'style="background-color:#da4b48;"';
+                                } else {
+                                    echo 'style="background-color:#009ee3;"';
+                                }
+                             ?>
+                        >
                             <div class="pd-l-plate-scale">
                                 <div class="pd-billboard-background">
                                     
@@ -65,10 +75,6 @@
             <div class="as-search-results as-filter-open as-category-landing as-desktop" id="as-search-results">
 
                 <div id="accessories-tab" class="as-accessories-details">
-
-                    <?php 
-                        echo json_encode($_REQUEST);
-                    ?>
 
                     <div class="as-accessories" id="as-accessories" style="height: 70vh; <?php if ($_POST['payment_status']!='approved') { echo "display:none;"; } ?>">
                             <div style="margin-top:20px;text-align:center;">

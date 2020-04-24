@@ -49,7 +49,7 @@
             <div class="as-navtuck-wrapper">
                 <div class="as-l-fullwidth  as-navtuck" data-events="event52">
                     <div>
-                        <div class="pd-billboard pd-category-header" style="background-color:#da4b48">
+                        <div class="pd-billboard pd-category-header" style="background-color:#da4b48;">
                             <div class="pd-l-plate-scale">
                                 <div class="pd-billboard-background">
                                     
