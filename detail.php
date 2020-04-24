@@ -188,6 +188,10 @@
 
                                             </h3>
                                         </div>
+
+                                        <?php 
+                                            echo dd($_POST);
+                                        ?>
                                         
                                         <h3 style="font-size:2em;">
                                            <b><?php echo "$" . $_POST['price'] ?> </b>
