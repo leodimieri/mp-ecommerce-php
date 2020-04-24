@@ -51,7 +51,7 @@
                                 //APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398
                                 $idd = $_POST['payment_id']; 
                                 if($_POST['payment_status']=='approved') {
-                                    $payment = $payment = MercadoPago\Payment::find_by_id($idd);
+                                    $payment = MercadoPago\Payment::find_by_id($idd);
                                 }
 
                             ?>
