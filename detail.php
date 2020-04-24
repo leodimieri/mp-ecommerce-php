@@ -116,8 +116,8 @@
 
                                 <?php
                                 require __DIR__ .  '/vendor/autoload.php';
-                                $http = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on'? "https://" : "http://";
-                                $url = $http . $_SERVER["SERVER_NAME"];
+
+                                $url = "https://" . $_SERVER["SERVER_NAME"];
 
                                 MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398');
                                 
