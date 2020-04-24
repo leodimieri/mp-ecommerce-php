@@ -113,6 +113,72 @@
                                     </div>
 
                                 </div>
+
+                                <?php
+                                require __DIR__ .  '/vendor/autoload.php';
+                                
+                                // {
+                                //     "id": 554010269,
+                                //     "nickname": "TT383403",
+                                //     "password": "qatest2718",
+                                //     "site_status": "active",
+                                //     "email": "test_user_90132478@testuser.com"
+                                // }
+
+                                MercadoPago\SDK::setAccessToken('TEST-6357525686160058-040717-9b837e65a95a80372ca9962eb9533fc1-38870211');
+                                
+                                $preference = new MercadoPago\Preference();
+                                $preference->payment_methods = array(
+                                "excluded_payment_methods" => array(
+                                    array("id" => "amex")
+                                ),
+                                "excluded_payment_types" => array(
+                                    array("id" => "atm")
+                                ),
+                                "installments" => 6
+                                );
+
+                                $payer = new MercadoPago\Payer();
+                                $payer->name = "Lalo";
+                                $payer->surname = "Landa";
+                                $payer->email = "test_user_90132478@testuser.com";
+                                $payer->phone = array(
+                                    "area_code" => "011",
+                                    "number" => "2222 3333"
+                                );
+                                
+                                $payer->identification = array(
+                                    "type" => "DNI",
+                                    "number" => "22333444"
+                                );
+                                
+                                $payer->address = array(
+                                    "street_name" => "Falsa",
+                                    "street_number" => 123,
+                                    "zip_code" => "1111"
+                                );
+
+                                $item1 = new MercadoPago\Item();
+                                $item1->id = "1234";
+                                $item1->title = $_POST['title'];
+                                $item1->description = "Dispositivo móvil de Tienda e-commerce";
+                                $item1->quantity = 1;
+                                $item1->currency_id = "ARS";
+                                $item1->picture_url = $_POST['img'];
+                                $item1->unit_price = $_POST['price'];
+
+                                $preference->items = array($item1);
+
+                                $preference->back_urls = array(
+                                    "success" => __DIR__ ."/success",
+                                    "failure" => __DIR__ ."/failure",
+                                    "pending" => __DIR__ ."/pending"
+                                );
+                                $preference->external_reference = "ABCD1234";
+
+                                $preference->save();
+                                ?>
+
                                 <div class="as-producttile-info" style="float:left;min-height: 168px;">
                                     <div class="as-producttile-titlepricewraper" style="min-height: 128px;">
                                         <div class="as-producttile-title">
@@ -124,13 +190,20 @@
                                             </h3>
                                         </div>
                                         <h3 >
-                                            <?php echo $_POST['price'] ?>
+                                           <b>$ <?php echo $_POST['price'] ?> </b>
                                         </h3>
                                         <h3 >
                                             <?php echo "$" . $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+
+                                    <!-- <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button> -->
+                                    <form method="POST">
+                                        <script
+                                            src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
+                                            data-preference-id="<?php echo $preference->id; ?>">
+                                        </script>
+                                    </form>
                                 </div>
                             </div>
                         </div>
