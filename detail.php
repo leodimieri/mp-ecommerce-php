@@ -188,7 +188,7 @@
 
                                             </h3>
                                         </div>
-                                        <h3><?php echo $preference['notification_url']; ?></h3>
+                                        <h3><?php echo $preference->notification_url; ?></h3>
                                         <h3 style="font-size:2em;">
                                            <b><?php echo "$" . $_POST['price'] ?> </b>
                                         </h3>
