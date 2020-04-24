@@ -43,6 +43,18 @@
 
 <body class="as-theme-light-heroimage">
 
+                            <?php
+                                require __DIR__ .  '/vendor/autoload.php';
+
+                                MercadoPago\SDK::setAccessToken('TEST-8196777983571350-031822-67512cd23d704fe6dfb8670cdcd5c825-469485398');
+                                //APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398');
+                                $idd = $_POST['payment_id']; 
+                                if($_POST['payment_status']=='approved') {
+                                    $payment = $payment = MercadoPago\Payment::find_by_id($idd);
+                                }
+
+                            ?>
+
     <div class="stack">
         
         <div class="as-search-wrapper" role="main">
@@ -85,8 +97,8 @@
                             <center>
                                 <h2>¡Tu pago fue aprobado!</h2>
                                 <h4>
-                                    Pagaste: <b><?php echo "$" . $_POST['transaction_amount'];?></b>,
-                                    con <b><?php echo $_POST['payment_method_id']; ?></b> (<b><?php echo $_POST['installments']; ?></b> cuota/s de <b><?php echo "$ " . $_POST['transaction_details']['installment_amount']; ?></b>)<br>
+                                    Pagaste: <b><?php echo "$" . $payment->transaction_amount; ?></b>,
+                                    con <b><?php echo $payment->payment_method_id; ?></b> (<b><?php echo $payment->installments; ?></b> cuota/s de <b><?php echo "$ " . $payment->transaction_details->installment_amount; ?></b>)<br>
                                     Tu referencia para el pago es: <b><?php echo $_POST['external_reference']; ?></b><br>
                                     Tu ID del pago es: <b><?php echo $_POST['payment_id']; ?></b> (Conservalo para posibles revisiones)<br>
                                 </h4>
