@@ -1,4 +1,0 @@
-RewriteEngine on
-RewriteCond %{HTTPS} off
-RewriteCond %{HTTP_HOST} ^leodimieri-mp-ecommerce-php.herokuapp.com$
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
