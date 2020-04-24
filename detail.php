@@ -116,7 +116,8 @@
 
                                 <?php
                                 require __DIR__ .  '/vendor/autoload.php';
-                                
+                                $http = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on'? "https://" : "http://";
+                                $url = $http . $_SERVER["SERVER_NAME"];
                                 // {
                                 //     "id": 554010269,
                                 //     "nickname": "TT383403",
@@ -170,14 +171,14 @@
                                 $preference->items = array($item1);
 
                                 $preference->back_urls = array(
-                                    "success" => __DIR__ ."/success.php",
-                                    "failure" => __DIR__ ."/failure.php",
-                                    "pending" => __DIR__ ."/pending.php"
+                                    "success" => $url ."/success.php",
+                                    "failure" => $url ."/failure.php",
+                                    "pending" => $url ."/pending.php"
                                 );
                                 $preference->auto_return = "all";
                                 $preference->external_reference = "ABCD1234";
 
-                                $preference->notification_url = __DIR__ ."/notifications.php";
+                                $preference->notification_url = $url ."/notifications.php";
 
                                 $preference->save();
                                 ?>
