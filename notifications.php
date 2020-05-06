@@ -7,29 +7,29 @@
     if(isset($_POST["type"])) {
         switch($_POST["type"]) {
             case "payment":
-                $payment = MercadoPago\Payment.find_by_id($_POST["id"]);
+                $payment = MercadoPago\Payment::find_by_id($_POST["id"]);
                 break;
             case "plan":
-                $plan = MercadoPago\Plan.find_by_id($_POST["id"]);
+                $plan = MercadoPago\Plan::find_by_id($_POST["id"]);
                 break;
             case "subscription":
-                $plan = MercadoPago\Subscription.find_by_id($_POST["id"]);
+                $plan = MercadoPago\Subscription::find_by_id($_POST["id"]);
                 break;
             case "invoice":
-                $plan = MercadoPago\Invoice.find_by_id($_POST["id"]);
+                $plan = MercadoPago\Invoice::find_by_id($_POST["id"]);
                 break;
         }
     }
 
     if(isset($payment)) {
         http_response_code(200);
-        return $payment;
+        return json_encode($payment);
     } else if (isset($plan)) {
         http_response_code(200);
-        return $plan;
+        echo json_encode($plan);
     } else {
         http_response_code(200);
-        return json_encode(array(['status' => 'OK', 'code' => 200]));
+        echo json_encode(['status' => 'OK', 'code' => 200]);
     }
 
 ?>
