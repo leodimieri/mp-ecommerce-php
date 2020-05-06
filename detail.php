@@ -192,7 +192,7 @@
 
                                             </h3>
                                         </div>
-                                        
+                                        <?php echo $url ?>
                                         <h3 style="font-size:2em;">
                                            <b><?php echo "$" . $_POST['price'] ?> </b>
                                         </h3>
