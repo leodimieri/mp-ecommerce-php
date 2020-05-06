@@ -177,7 +177,7 @@
                                 
                                 $preference->external_reference = "ABCD1234";
 
-                                $preference->notification_url = $url ."/notifications";
+                                $preference->notification_url = $url ."/notifications.php";
 
                                 $preference->save();
                                 ?>
