@@ -192,7 +192,7 @@
 
                                             </h3>
                                         </div>
-                                        <?php echo dd($preference) ?>      
+                                        <?php echo json_encode($preference); ?>      
                                         <h3 style="font-size:2em;">
                                            <b><?php echo "$" . $_POST['price'] ?> </b>
                                         </h3>
