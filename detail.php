@@ -162,10 +162,11 @@
                                 $item1->description = "Dispositivo móvil de Tienda e-commerce";
                                 $item1->quantity = 1;
                                 $item1->currency_id = "ARS";
-                                $item1->picture_url = $_POST['img'];
+                                $item1->picture_url = $url . substr($_POST['img'], 1);
                                 $item1->unit_price = $_POST['price'];
 
                                 $preference->items = array($item1);
+                                $preference->payer = $payer;
 
                                 $preference->back_urls = array(
                                     "success" => $url ."/success",
