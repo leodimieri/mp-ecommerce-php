@@ -207,14 +207,6 @@
                                             ?>
                                         </h3>
                                     </div>
-                                    
-                                    <div>
-
-                                            <p>
-                                                <?php echo $preference->id; ?>
-                                            </p>
-
-                                    </div>
 
                                     <form action="./states.php" method="POST">
                                         <script
