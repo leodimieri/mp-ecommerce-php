@@ -192,7 +192,7 @@
 
                                             </h3>
                                         </div>
-                                        <?php echo json_encode($preference); ?>      
+                                        
                                         <h3 style="font-size:2em;">
                                            <b><?php echo "$" . $_POST['price'] ?> </b>
                                         </h3>
@@ -207,6 +207,14 @@
                                         </h3>
                                     </div>
                                     
+                                    <div>
+
+                                            <p>
+                                                <?php echo $preference->id; ?>
+                                            </p>
+
+                                    </div>
+
                                     <form action="./states.php" method="POST">
                                         <script
                                             src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
