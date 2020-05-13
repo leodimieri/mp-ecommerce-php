@@ -142,7 +142,7 @@
                                 $payer->email = "test_user_63274575@testuser.com";
                                 $payer->phone = array(
                                     "area_code" => "011",
-                                    "number" => "2222 3333"
+                                    "number" => "2222-3333"
                                 );
                                 
                                 $payer->identification = array(
@@ -192,7 +192,7 @@
 
                                             </h3>
                                         </div>
-                                        
+                                        <?php echo dd($preference) ?>      
                                         <h3 style="font-size:2em;">
                                            <b><?php echo "$" . $_POST['price'] ?> </b>
                                         </h3>
